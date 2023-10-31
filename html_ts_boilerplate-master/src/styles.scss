@@ -1,83 +1,9 @@
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  font:inherit;
-}
+$border-radius: 2rem;
+$border-width: 0.25rem;
 
 
-/* Prevent font size inflation */
-html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-}
 
-/* Remove default margin in favour of better control in authored CSS */
-body, h1, h2, h3, h4, p,
-figure, blockquote, dl, dd {
-  margin-block-end: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-  list-style: none;
-}
-
-/* Set core body defaults */
-body {
-  font-family: 'Poppins';
-  min-height: 100vh;
-  line-height: 1.5;
-}
-
-/* Set shorter line heights on headings and interactive elements */
-h1, h2, h3, h4,
-button, input, label {
-  line-height: 1.1;
-}
-
-/* Balance text wrapping on headings */
-h1, h2,
-h3, h4 {
-  text-wrap: balance;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-  color: currentColor;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input, button,
-textarea, select {
-  font: inherit;
-}
-
-/* Make sure textareas without a rows attribute are not tiny */
-textarea:not([rows]) {
-  min-height: 10em;
-}
-
-/* Anything that has been anchored to should have extra scroll margin */
-:target {
-  scroll-margin-block: 5ex;
-}
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
 
 .container {
   --max-width: 1440px;
@@ -88,14 +14,20 @@ textarea:not([rows]) {
   margin-inline:auto;
 }
 
-.col-4 {
-  background-color: aqua;
-}
 
 .bg-grass {
   background-image: url('../assets/images/grassbg.jpg');
   background: linear-gradient(180deg, rgba(18, 54, 22, 0.60) 0%, rgba(39, 123, 47, 0.00) 100%), url(./assets/images/grassbg.jpg), lightgray 50% / cover no-repeat;
+}
 
+.bg-grass-2 {
+  background-image: url('../assets/images/grassbg.jpg');
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('../assets/images/grassbg.jpg'), lightgray 50% / cover no-repeat;
+  box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.bg-grey {
+  background-color: grey;
 }
 
 .logoanchor {
@@ -136,6 +68,7 @@ textarea:not([rows]) {
   color: green;
   font-family: Poppins;
   margin: 4rem auto 5rem auto;
+  font-weight: bold;
 }
 
 .companynamebig {
@@ -169,4 +102,159 @@ textarea:not([rows]) {
   font-weight: 900;
   line-height: 8rem;
   margin-top: 2rem;
+}
+
+
+.card {
+  box-shadow: 0px 10px 10px 0px rgba(16, 51, 30, 0.10);
+  border-radius: 2rem;
+  border: none;
+}
+
+
+.secondary-headers {
+  color: #828282;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.card-title {
+  font-weight: bold;
+  color: #0D4D14;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1.5rem;
+  padding-top: 0.5rem;
+  padding: 1rem 1rem 0 1rem;
+}
+
+.card-text {
+  color: #0D4D14;
+  font-family: Poppins;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  padding: 0 1rem 1rem 1rem;
+}
+
+
+.aboutrow {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  padding: 5rem 2rem 0 2rem;
+}
+
+body{
+  background: #F9F9F9;    
+}
+.testimonials {
+margin-top: 40px;    
+}
+.testimonial {
+  margin-bottom: 3em;
+  background: #fff;
+  padding: 2em;
+  border-right: 30px solid #F9F9F9;
+  min-height: 169px;
+}
+
+.testimonial:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 14px;
+  box-shadow: 0 16px 5px rgba(0,0,0,.04);
+  max-width: 90%;
+  width: 90%;
+  height: 50px;
+  left: 1px;
+}
+
+.avatar .img-circle {
+  background: #fff;
+  padding: 3px;
+}
+
+.avatar img {
+  max-width: 100%;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+.testimonial {
+  border-radius: 2.5rem;
+  border: 1px solid #6CB981;
+  margin: 1rem 1rem 1rem 1rem;
+}
+
+.testimony-body {
+  color: #0D4C14;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.375rem;
+}
+
+.testimonial h4, .testimonial h4 a {
+  text-decoration: none;
+  color: #6CB981;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.375rem;
+}
+
+.testimonial h4 {
+  margin-bottom: 8px;
+}
+
+.testimonial .testimony-body {
+  font-size: .9em;
+}
+
+
+.footer-button-primary {
+  border-radius: 2rem;
+  background: #9FDEA9;
+  color: #9FDEA9;
+  border: none;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.footer-button-secondary {
+  border: 3px solid #9FDEA9;
+  color: white;
+  border-radius: 2rem;
+  background: none;
+  width: 25%;
+  margin: 0 auto;
+}
+
+.footer-button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bg-grey {
+  background: #FCFCFC;
+}
+
+.colored-rectangle {
+  background-color:#324B29;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
 }
