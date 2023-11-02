@@ -1,19 +1,14 @@
 $border-radius: 2rem;
 $border-width: 0.25rem;
 
-
-
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
 .container {
   --max-width: 1440px;
   --padding: 1rem;
-  
-
   width: min(var(--max-width), 100% - (var(--padding) * 2));
   margin-inline:auto;
 }
-
 
 .bg-grass {
   background-image: url('../assets/images/grassbg.jpg');
@@ -104,13 +99,11 @@ $border-width: 0.25rem;
   margin-top: 2rem;
 }
 
-
 .card {
   box-shadow: 0px 10px 10px 0px rgba(16, 51, 30, 0.10);
   border-radius: 2rem;
   border: none;
 }
-
 
 .secondary-headers {
   color: #828282;
@@ -145,7 +138,6 @@ $border-width: 0.25rem;
   padding: 0 1rem 1rem 1rem;
 }
 
-
 .aboutrow {
   display: flex;
   flex-direction: row;
@@ -157,7 +149,7 @@ body{
   background: #F9F9F9;    
 }
 .testimonials {
-margin-top: 40px;    
+  margin-top: 40px;
 }
 .testimonial {
   margin-bottom: 3em;
@@ -221,7 +213,6 @@ margin-top: 40px;
 .testimonial .testimony-body {
   font-size: .9em;
 }
-
 
 .footer-button-primary {
   border-radius: 2rem;
@@ -289,8 +280,8 @@ margin-top: 40px;
 
 @media (min-width: 768px) and (max-width: 1080px) {
   .testimonial, .card{
-      margin: 1em; /* Add spacing around testimonial cards */
-      width: 80%; /* Make testimonial cards take full width */
+      margin: 1em;
+      width: 80%;
       gap: 0.5em;
   }
 }
@@ -301,10 +292,9 @@ margin-top: 40px;
   }
 }
 
-/* Media query for even smaller screens */
 @media (max-width: 480px) {
   .secondary-headers {
-      font-size: 2em; /* Further adjust font size for very small screens */
+      font-size: 2em;
   }
 }
 
@@ -314,10 +304,9 @@ margin-top: 40px;
   }
 }
 
-/* Media query for even smaller screens */
 @media (max-width: 480px) {
   span {
-      font-size: 0.7em; /* Further adjust font size for very small screens */
+      font-size: 0.7em;
   }
 }
 
